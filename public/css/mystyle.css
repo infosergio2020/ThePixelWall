@@ -1,0 +1,88 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* Now 10px = 1rem! */
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+body{
+    font-size: 1.6rem; /* default font-size for document */
+    font-family: 'Lato', sans-serif;
+    background-color: #b5d7ff;
+}
+
+h1{
+    font-size: 5.4rem;
+    margin: 5rem auto;
+}
+h2{
+    font-size: 4.4rem;
+}
+h3{
+    font-size: 3.6rem;
+}
+h4{
+    font-size: 3rem;
+}
+
+
+.title-container{
+    text-align: center;
+}
+
+.title-container span{
+    /* font-family: 'Lobster', cursive; */
+    font-family: 'Pacifico', cursive;
+    color:  #0026cfd7;
+}
+
+.bg-personal{
+    padding: 2rem 0;
+    background: linear-gradient(160deg, rgba(2,0,28,1) 11%, rgba(9,11,121,1) 39%, rgba(9,28,122,1) 59%, rgba(6,124,161,1) 78%);
+}
+
+.nav-bar-personal{
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar-personal li:nth-child(1){
+    padding-top: 1rem;
+    margin-right: 2rem;
+    font-family: 1.8rem;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-item-personal{
+    font-weight: 700;
+    padding: 0 1rem;
+    border: 1px solid #ffffffab;
+    border-radius: .8rem;
+    margin: 0 5rem 0 0;
+}
+
+.btn-primary,.btn-success,.btn-danger{
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.btn{
+    border-radius: 0.6rem;
+}
+
+.btn:hover{
+    box-shadow: 7px 0px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 7px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px 0px 5px 0px rgba(0,0,0,0.75);
+    transform: scale(1.05);
+    transition: transform 400ms ease-in-out;
+}
+
+
+
+/* a little fixes*/
+
+.card-body-custom{
+    padding: 1rem 20rem;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Pixel Wall</title>
+
+    <%- include('partials/head') %>
+</head>
+<body>
+    
+    <%- include("partials/navigation") %>
+
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="title-container">
+                    <h1>Welcome to<span>The Pixel Wall</span></h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">            
+            <% files.forEach(function(file) { %>
+                <div class="col-sm-4">                    
+                    <div class="card animate__fadeInDown">
+                       <% if(file.isImage){ %> 
+                        <img src="view-image/<%= file.filename %>" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= file.metadata.title %></h5>
+                            <p class="card-text"><%= file.metadata.description %></p>
+                            <p class="card-text"><%= format(file.uploadDate) %></p>
+                            <div class="d-grid gap-2">
+                                <a href="/image/<%= file.filename %>" class="btn btn-block btn-primary">more details</a>    
+                            </div>
+                        </div>
+                       <% } else { %>
+                            <%= file.filename %>
+                        <% } %>
+                    </div>
+                </div>
+            <% }) %>   
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+</body>
+</html>
